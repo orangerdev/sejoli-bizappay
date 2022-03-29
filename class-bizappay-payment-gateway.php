@@ -331,7 +331,7 @@ final class SejoliBizappay extends \SejoliSA\Payment{
             Field::make('text', 'bizappay_inv_prefix', __('Invoice Prefix', 'sejoli-bizappay'))
             ->set_required(true)
             ->set_default_value('sjl1')
-            ->set_help_text('Maksimal 6 Karakter')
+            ->set_help_text(__('Maksimal 6 Karakter', 'sejoli-bizappay'))
             ->set_conditional_logic(array(
                 array(
                     'field' => 'bizappay_active',
@@ -531,7 +531,7 @@ final class SejoliBizappay extends \SejoliSA\Payment{
 
     /**
      * Set order price if there is any fee need to be added
-     * @since   1.0.0ddddddd
+     * @since   1.0.0
      * @param   float $price
      * @param   array $order_data
      * @return  float
@@ -756,7 +756,7 @@ final class SejoliBizappay extends \SejoliSA\Payment{
 
     /**
      * Process callback from bizappay
-     * @since   1.3.0
+     * @since   1.0.0
      * @return  void
      */
     protected function process_callback() {

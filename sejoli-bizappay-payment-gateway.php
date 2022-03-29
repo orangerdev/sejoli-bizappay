@@ -34,3 +34,10 @@ add_filter('sejoli/payment/available-libraries', function( array $libraries ){
     return $libraries;
 
 });
+
+add_action( 'plugins_loaded', 'plugin_init' ); 
+function plugin_init() {
+
+    load_plugin_textdomain( 'sejoli-bizappay', false, dirname(plugin_basename(__FILE__)).'/languages/' );
+
+}
