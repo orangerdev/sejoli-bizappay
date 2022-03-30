@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sejoli - BIZAPPAY Payment Gateway\n"
+"POT-Creation-Date: 2022-03-29 20:20+0700\n"
+"PO-Revision-Date: 2022-03-29 20:21+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: sejoli-bizappay-payment-gateway.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: class-bizappay-payment-gateway.php:58 class-bizappay-payment-gateway.php:59
+msgid "Bizappay"
+msgstr "Bizappay"
+
+#: class-bizappay-payment-gateway.php:60
+msgid "Transaksi via Bizappay Payment Gateway."
+msgstr "Transactions via Payment Gateway Bizappay."
+
+#: class-bizappay-payment-gateway.php:64
+msgid "Affin Bank"
+msgstr "Affin Bank"
+
+#: class-bizappay-payment-gateway.php:65
+msgid "AGRONet"
+msgstr "AGRONet"
+
+#: class-bizappay-payment-gateway.php:66
+msgid "Alliance Bank (Personal)"
+msgstr "Alliance Bank (Personal)"
+
+#: class-bizappay-payment-gateway.php:67
+msgid "AmBank"
+msgstr "AmBank"
+
+#: class-bizappay-payment-gateway.php:68
+msgid "Bank Islam"
+msgstr "Bank Islam"
+
+#: class-bizappay-payment-gateway.php:69
+msgid "Bank Muamalat"
+msgstr "Bank Muamalat"
+
+#: class-bizappay-payment-gateway.php:70
+msgid "Bank Rakyat"
+msgstr "Bank Rakyat"
+
+#: class-bizappay-payment-gateway.php:71
+msgid "BSN"
+msgstr "BSN"
+
+#: class-bizappay-payment-gateway.php:72
+msgid "CIMB Clicks"
+msgstr "CIMB Clicks"
+
+#: class-bizappay-payment-gateway.php:73
+msgid "Hong Leong Bank"
+msgstr "Hong Leong Bank"
+
+#: class-bizappay-payment-gateway.php:74
+msgid "HSBC Bank"
+msgstr "HSBC Bank"
+
+#: class-bizappay-payment-gateway.php:75
+msgid "KFH"
+msgstr "KFH"
+
+#: class-bizappay-payment-gateway.php:76
+msgid "Maybank2E"
+msgstr "Maybank2E"
+
+#: class-bizappay-payment-gateway.php:77
+msgid "Maybank2U"
+msgstr "Maybank2U"
+
+#: class-bizappay-payment-gateway.php:78
+msgid "OCBC Bank"
+msgstr "OCBC Bank"
+
+#: class-bizappay-payment-gateway.php:79
+msgid "Public Bank"
+msgstr "Public Bank"
+
+#: class-bizappay-payment-gateway.php:80
+msgid "RHB Bank"
+msgstr "RHB Bank"
+
+#: class-bizappay-payment-gateway.php:81
+msgid "Standard Chartered"
+msgstr "Standard Chartered"
+
+#: class-bizappay-payment-gateway.php:82
+msgid "UOB Bank"
+msgstr "UOB Bank"
+
+#: class-bizappay-payment-gateway.php:297
+msgid "Pengaturan Bizappay"
+msgstr "Bizappay Settings"
+
+#: class-bizappay-payment-gateway.php:299
+msgid "Aktifkan pembayaran melalui Bizappay"
+msgstr "Activate payment via Bizappay"
+
+#: class-bizappay-payment-gateway.php:301
+msgid "Payment Mode"
+msgstr "Payment Mode"
+
+#: class-bizappay-payment-gateway.php:307
+msgid "API Key Sandbox"
+msgstr "API Key Sandbox"
+
+#: class-bizappay-payment-gateway.php:319
+msgid "API Key Live"
+msgstr "API Key Live"
+
+#: class-bizappay-payment-gateway.php:331
+msgid "Invoice Prefix"
+msgstr "Invoice Prefix"
+
+#: class-bizappay-payment-gateway.php:334
+msgid "Maksimal 6 Karakter"
+msgstr "Maximum 6 Characters"
+
+#: class-bizappay-payment-gateway.php:342
+msgid "Pilih Metode Pembayaran"
+msgstr "Select Payment Method"
+
+#: class-bizappay-payment-gateway.php:350
+msgid "Metode Pembayaran"
+msgstr "Payment Method"
+
+#: class-bizappay-payment-gateway.php:354
+msgid ""
+"Wajib memilih minimal satu metode pembayaran dan PASTIKAN metode tersebut "
+"sudah aktif di pengaturan project bizappay.com"
+msgstr ""
+"Must have at least one payment method and MAKE SURE the method is active in "
+"the bizappay.com project settings"
+
+#: class-bizappay-payment-gateway.php:698
+msgid ""
+"Terjadi kesalahan saat request ke bizappay.com. Silahkan kontak pemilik "
+"website ini."
+msgstr ""
+"An error occurred when requesting to bizappay.com. Please contact the owner "
+"of this website."
+
+#: class-bizappay-payment-gateway.php:699
+#: template/checkout/header-thankyou.php:10
+msgid "Terjadi kesalahan"
+msgstr "There is an error"
+
+#: class-bizappay-payment-gateway.php:820
+msgid "You don't have permission to access this page"
+msgstr "You don't have permission to access this page"
+
+#: class-bizappay-payment-gateway.php:821
+msgid "Forbidden access by SEJOLI"
+msgstr "Forbidden access by SEJOLI"
+
+#: class-bizappay-payment-gateway.php:850
+msgid "Order telah dibatalkan"
+msgstr "Order has been cancelled"
+
+#: class-bizappay-payment-gateway.php:855
+msgid "Order sudah diproses"
+msgstr "Order has been processed"
+
+#: class-bizappay-payment-gateway.php:904
+msgid "via Bizappay"
+msgstr "via Bizappay"
+
+#: template/checkout/header-thankyou.php:9
+msgid "Order tidak ada."
+msgstr "Orders do not exist."
+
+#: template/checkout/order-cancelled.php:11
+#, php-format
+msgid "Pesanan untuk order INV %s telah dibatalkan. Terima kasih"
+msgstr "The order for order INV %s has been cancelled. Thank You"
+
+#: template/checkout/order-processed.php:11
+msgid "Terima kasih"
+msgstr "Thank You"
+
+#: template/checkout/order-processed.php:12
+#, php-format
+msgid "Pesanan untuk order INV %s sedang diproses"
+msgstr "Orders for orders INV %s are being processed"
+
+#: template/checkout/order-processed.php:13
+msgid "Kami menunggu informasi dari bizappay untuk proses pembayaran"
+msgstr "We are waiting for information from bizappay to process the payment"
+
+#. Plugin Name of the plugin/theme
+msgid "Sejoli - BIZAPPAY Payment Gateway"
+msgstr "Sejoli - BIZAPPAY Payment Gateway"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://sejoli.co.id"
+msgstr "https://sejoli.co.id"
+
+#. Description of the plugin/theme
+msgid ""
+"Integrate Sejoli Premium WordPress Membership Plugin with BIZAPPAY Payment "
+"Gateway."
+msgstr ""
+"Integrate Sejoli Premium WordPress Membership Plugin with BIZAPPAY Payment "
+"Gateway."
+
+#. Author of the plugin/theme
+msgid "Sejoli"
+msgstr "Sejoli"
