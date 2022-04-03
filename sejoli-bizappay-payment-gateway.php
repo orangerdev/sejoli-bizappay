@@ -35,9 +35,22 @@ add_filter('sejoli/payment/available-libraries', function( array $libraries ){
 
 });
 
-add_action( 'plugins_loaded', 'plugin_init' ); 
+add_action( 'plugins_loaded', 'plugin_init' );
+
 function plugin_init() {
 
     load_plugin_textdomain( 'sejoli-bizappay', false, dirname(plugin_basename(__FILE__)).'/languages/' );
 
 }
+
+require_once( plugin_dir_path( __FILE__ ) . '/vendor/autoload.php' );
+
+require_once( plugin_dir_path( __FILE__ ) . '/vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php');
+
+$update_checker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/orangerdev/sejoli-bizappay',
+	__FILE__,
+	'sejoli-bizappay'
+);
+
+$update_checker->setBranch('release');
