@@ -378,7 +378,7 @@ final class SejoliBizappay extends \SejoliSA\Payment{
         if(true === $active) :
 
             $methods          = carbon_get_theme_option('bizappay_payment_method');
-            $image_source_url = 'https://bizappay.my/asset/img/';
+            $image_source_url = plugin_dir_url(__FILE__);
 
             foreach( (array) $methods as $_method ) :
 
@@ -389,133 +389,133 @@ final class SejoliBizappay extends \SejoliSA\Payment{
                     case 'ABB0233' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/ABB0233.png'
+                            'image' => $image_source_url.'img/ABB0233.png'
                         ];
                         break;
 
                     case 'AGRO01' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/AGRO01.png'
+                            'image' => $image_source_url.'img/AGRO01.png'
                         ];
                         break;
 
                     case 'ABMB0212' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/ABMB0212.png'
+                            'image' => $image_source_url.'img/ABMB0212.png'
                         ];
                         break;
 
                     case 'AMBB0209' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/AMBB0209.png'
+                            'image' => $image_source_url.'img/AMBB0209.png'
                         ];
                         break;
 
                     case 'BIMB0340' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/BIMB0340.png'
+                            'image' => $image_source_url.'img/BIMB0340.png'
                         ];
                         break;
 
                     case 'BMMB0341' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/BMMB0341.png'
+                            'image' => $image_source_url.'img/BMMB0341.png'
                         ];
                         break;
 
                     case 'BKRM0602' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/BKRM0602.png'
+                            'image' => $image_source_url.'img/BKRM0602.png'
                         ];
                         break;
 
                     case 'BSN0601' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/BSN0601.png'
+                            'image' => $image_source_url.'img/BSN0601.png'
                         ];
                         break;
 
                     case 'BCBB0235' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/BCBB0235.png'
+                            'image' => $image_source_url.'img/BCBB0235.png'
                         ];
                         break;
 
                     case 'HLB0224' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/HLB0224.png'
+                            'image' => $image_source_url.'img/HLB0224.png'
                         ];
                         break;
 
                     case 'HSBC0223' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/HSBC0223.png'
+                            'image' => $image_source_url.'img/HSBC0223.png'
                         ];
                         break;
 
                     case 'KFH0346' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/KFH0346.png'
+                            'image' => $image_source_url.'img/KFH0346.png'
                         ];
                         break;
 
                     case 'MBB0228' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/MBB0228.png'
+                            'image' => $image_source_url.'img/MBB0228.png'
                         ];
                         break;
 
                     case 'MB2U0227' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/MB2U0227.png'
+                            'image' => $image_source_url.'img/MB2U0227.png'
                         ];
                         break;
 
                     case 'OCBC0229' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/OCBC0229.png'
+                            'image' => $image_source_url.'img/OCBC0229.png'
                         ];
                         break;
 
                     case 'PBB0233' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/PBB0233.png'
+                            'image' => $image_source_url.'img/PBB0233.png'
                         ];
                         break;
 
                     case 'RHB0218' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/RHB0218.png'
+                            'image' => $image_source_url.'img/RHB0218.png'
                         ];
                         break;
 
                     case 'SCB0216' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/SCB0216.png'
+                            'image' => $image_source_url.'img/SCB0216.png'
                         ];
                         break;
 
                     case 'UOB0226' :
                         $options[$key] = [
                             'label' => $this->method_options[$_method],
-                            'image' => $image_source_url.'logobank/UOB0226.png'
+                            'image' => $image_source_url.'img/UOB0226.png'
                         ];
                         break;
 
