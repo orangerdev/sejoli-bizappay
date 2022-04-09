@@ -9,7 +9,7 @@
  * Plugin Name:       Sejoli - BIZAPPAY Payment Gateway
  * Plugin URI:        https://sejoli.co.id
  * Description:       Integrate Sejoli Premium WordPress Membership Plugin with BIZAPPAY Payment Gateway.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires PHP: 	  7.4.1
  * Author:            Sejoli
  * Author URI:        https://sejoli.co.id
