@@ -4,7 +4,6 @@ use Carbon_Fields\Field;
 use SejoliSA\Admin\Product as AdminProduct;
 use SejoliSA\JSON\Product;
 use SejoliSA\Model\Affiliate;
-use Illuminate\Database\Capsule\Manager as Capsule;
 
 final class SejoliBizappay extends \SejoliSA\Payment{
 
@@ -99,18 +98,26 @@ final class SejoliBizappay extends \SejoliSA\Payment{
      */
     public function register_trx_table() {
 
-        if( !Capsule::schema()->hasTable( $this->table ) ):
+        global $wpdb;
 
-            Capsule::schema()->create( $this->table, function( $table ) {
-                $table->increments('ID');
-                $table->datetime('created_at');
-                $table->datetime('last_check')->default('0000-00-00 00:00:00');
-                $table->integer('order_id');
-                $table->string('status');
-                $table->text('detail')->nullable();
-            });
+        $table_name = $this->table;
 
-        endif;
+        if( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) != $table_name ) {
+
+            $query = "CREATE TABLE $table_name (
+                ID bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+                created_at datetime NOT NULL,
+                last_check datetime DEFAULT '0000-00-00 00:00:00',
+                order_id bigint(20) NOT NULL,
+                status varchar(255) NOT NULL,
+                detail text DEFAULT NULL,
+                PRIMARY KEY (ID)
+            ) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+
+            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+            dbDelta( $query );
+            
+        }
 
     }
 
@@ -121,12 +128,17 @@ final class SejoliBizappay extends \SejoliSA\Payment{
      * @return  false|object
      */
     protected function check_data_table( int $order_id ) {
+     
+        global $wpdb;
 
-        return Capsule::table($this->table)
-            ->where(array(
-                'order_id'  => $order_id
-            ))
-            ->first();
+        $table_name = $this->table;
+
+        $query = $wpdb->prepare( 
+            "SELECT * FROM $table_name WHERE order_id = %d LIMIT 1", 
+            $order_id 
+        );
+
+        return $wpdb->get_row( $query );
 
     }
 
@@ -137,15 +149,20 @@ final class SejoliBizappay extends \SejoliSA\Payment{
      * @return  void
      */
     protected function add_to_table( int $order_id ) {
+     
+        global $wpdb;
 
-        Capsule::table($this->table)
-            ->insert([
-                'created_at' => current_time('mysql'),
-                'last_check' => '0000-00-00 00:00:00',
-                'order_id'   => $order_id,
-                'status'     => 'pending'
-            ]);
-    
+        $table_name = $this->table;
+
+        $data = array(
+            'created_at' => current_time('mysql'),
+            'last_check' => '0000-00-00 00:00:00',
+            'order_id'   => $order_id,
+            'status'     => 'pending',
+        );
+
+        $wpdb->insert( $table_name, $data );
+
     }
 
     /**
@@ -156,15 +173,21 @@ final class SejoliBizappay extends \SejoliSA\Payment{
      * @return  void
      */
     protected function update_status( $order_id, $status ) {
-        
-        Capsule::table($this->table)
-            ->where(array(
-                'order_id' => $order_id
-            ))
-            ->update(array(
-                'status'    => $status,
-                'last_check'=> current_time('mysql')
-            ));
+     
+        global $wpdb;
+
+        $table_name = $this->table;
+
+        $data = array(
+            'status'     => $status,
+            'last_check' => current_time('mysql'),
+        );
+
+        $where = array(
+            'order_id' => $order_id,
+        );
+
+        $wpdb->update( $table_name, $data, $where );
 
     }
 
@@ -176,14 +199,20 @@ final class SejoliBizappay extends \SejoliSA\Payment{
      * @return  void
      */
     protected function update_detail( $order_id, $detail ) {
-        
-        Capsule::table($this->table)
-            ->where(array(
-                'order_id' => $order_id
-            ))
-            ->update(array(
-                'detail' => serialize($detail),
-            ));
+     
+        global $wpdb;
+
+        $table_name = $this->table;
+
+        $data = array(
+            'detail' => serialize($detail),
+        );
+
+        $where = array(
+            'order_id' => $order_id,
+        );
+
+        $wpdb->update( $table_name, $data, $where );
 
     }
 
